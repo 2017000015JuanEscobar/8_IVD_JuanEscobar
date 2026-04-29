@@ -99,6 +99,22 @@ public class jfrmMenú extends javax.swing.JFrame {
         String clave =JOptionPane.showInputDialog(
                                         "Ingrese su nombre");
         JOptionPane.showMessageDialog(null, "Bienvenido seas"+clave);
+        Object[] valoresSeleccionables = {"uno","dos","tres"};
+        java.net.URL url = getClass().getResource("/javalogo.png");
+        javax.swing.ImageIcon iconoFinal = null;
+        
+        if (url !=null){
+            java.awt.Image imgInicial = new javax.swing.ImageIcon(url).getImage();
+            java.awt.Image imgMedia = imgInicial.getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+            iconoFinal = new javax.swing.ImageIcon(imgMedia);
+            
+        String s = (String) JOptionPane.showInputDialog(null,
+                "Selecciona una opcion",
+                "Lista de valores",
+                JOptionPane.PLAIN_MESSAGE,
+                iconoFinal,
+                valoresSeleccionables,
+                valoresSeleccionables[0]);
     }//GEN-LAST:event_jbtnDatosActionPerformed
 
     private void jbtnConversorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnConversorActionPerformed
